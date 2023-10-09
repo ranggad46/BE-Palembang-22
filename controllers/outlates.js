@@ -11,14 +11,14 @@ export const getOutlates = async (request, response) =>{
 }
 
 export const postOutlates =  (request, response) =>{
-  const {kota, kategori, no_telp} = request.body;
+  const {kota, alamat, no_telp} = request.body;
 
   sequelize.models.Outlates.create({
     kota,
-    kategori,
+    alamat,
     no_telp
   });
   response.json({
-    message: "Data Created succeccfully"
+    message: "Data Created succeccfully" 
   });
 } 
